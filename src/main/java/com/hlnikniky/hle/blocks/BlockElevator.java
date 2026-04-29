@@ -1,5 +1,6 @@
 package com.hlnikniky.hle.blocks;
 
+import com.hlnikniky.hle.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -13,11 +14,14 @@ public class BlockElevator extends Block {
     private IIcon iconBottom;
     private IIcon iconSide;
 
+
     public BlockElevator() {
         super(Material.iron);
         setBlockName("elevator");
         setHardness(2.0F);
         setResistance(10.0F);
+
+        setCreativeTab(CommonProxy.tabHLE);
     }
 
     @Override

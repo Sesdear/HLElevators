@@ -1,6 +1,8 @@
 package com.hlnikniky.hle;
 
+import com.hlnikniky.hle.creativetab.CreativeTabHLE;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -19,6 +21,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class CommonProxy {
 
     public static Block elevator;
+    public static CreativeTabs tabHLE = new CreativeTabHLE("HLElevators");
 
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
     // GameRegistry." (Remove if not needed)
@@ -32,6 +35,8 @@ public class CommonProxy {
         // FMLCommonHandler.instance().bus().register(new ElevatorEventHandler());
         elevator = new BlockElevator();
         GameRegistry.registerBlock(elevator, "elevator");
+
+
 
     }
 
