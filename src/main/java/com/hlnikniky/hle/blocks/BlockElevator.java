@@ -1,6 +1,5 @@
 package com.hlnikniky.hle.blocks;
 
-import com.hlnikniky.hle.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -8,12 +7,13 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
+import com.hlnikniky.hle.CommonProxy;
+
 public class BlockElevator extends Block {
 
     private IIcon iconTop;
     private IIcon iconBottom;
     private IIcon iconSide;
-
 
     public BlockElevator() {
         super(Material.iron);
@@ -26,17 +26,20 @@ public class BlockElevator extends Block {
 
     @Override
     public void registerBlockIcons(IIconRegister reg) {
-        iconTop    = reg.registerIcon("hle:elevator_top");
+        iconTop = reg.registerIcon("hle:elevator_top");
         iconBottom = reg.registerIcon("hle:elevator_bottom");
-        iconSide   = reg.registerIcon("hle:elevator_side");
+        iconSide = reg.registerIcon("hle:elevator_side");
     }
 
     @Override
     public IIcon getIcon(int side, int meta) {
         switch (side) {
-            case 0: return iconBottom;
-            case 1: return iconTop;
-            default: return iconSide;
+            case 0:
+                return iconBottom;
+            case 1:
+                return iconTop;
+            default:
+                return iconSide;
         }
     }
 

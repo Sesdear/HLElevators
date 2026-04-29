@@ -1,6 +1,5 @@
 package com.hlnikniky.hle;
 
-import com.hlnikniky.hle.creativetab.CreativeTabHLE;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -9,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.hlnikniky.hle.blocks.BlockElevator;
+import com.hlnikniky.hle.creativetab.CreativeTabHLE;
 import com.hlnikniky.hle.handlers.ElevatorEventHandler;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -35,8 +35,6 @@ public class CommonProxy {
         // FMLCommonHandler.instance().bus().register(new ElevatorEventHandler());
         elevator = new BlockElevator();
         GameRegistry.registerBlock(elevator, "elevator");
-
-
 
     }
 
